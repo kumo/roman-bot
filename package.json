@@ -1,0 +1,22 @@
+{
+  "name": "RomanBot",
+  "version": "0.0.1",
+  "description": "Today's date in Roman Numerals",
+  "main": "node_modules/twit/examples/roman.js",
+  "dependencies": {
+    "twit": "~1.1.12",
+    "roman-numerals": "~0.3.2",
+    "moment": "~2.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roman",
+    "numerals",
+    "date"
+  ],
+  "author": "Rob Clarke",
+  "license": "MIT"
+}

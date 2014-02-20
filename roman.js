@@ -14,7 +14,9 @@ var bot = new Bot(config1);
 
 console.log('RomanBot: Running.');
 
-setInterval(function() {
+Bot.prototype.today = function (callback) {
+  var self = this;
+ 
   var now = moment();
 
   var day = now.date();
@@ -29,7 +31,13 @@ setInterval(function() {
 
   var roman_tweet = util.format("%s %s / %s %s", eng_date, eng_date_roman, us_date, us_date_roman);
   
-  bot.tweet(roman_tweet, function (err, reply) {
+  this.bot.tweet(roman_tweet, function (err, reply) {
+    if(err) return callback(err);
+  });
+};
+
+setInterval(function() {
+  bot.today(function(err, reply)  {
     if(err) return handleError(err);
 
     console.log('\nTweet: ' + (reply ? reply.text : reply));

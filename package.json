@@ -2,7 +2,7 @@
   "name": "RomanBot",
   "version": "0.0.2",
   "description": "Today's date in Roman Numerals",
-  "main": "node_modules/twit/examples/roman.js",
+  "main": "roman.js",
   "dependencies": {
     "twit": "~1.1.12",
     "roman-numerals": "~0.3.2",

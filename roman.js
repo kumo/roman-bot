@@ -31,7 +31,7 @@ Bot.prototype.today = function (callback) {
 
   var roman_tweet = util.format("%s %s / %s %s", eng_date, eng_date_roman, us_date, us_date_roman);
   
-  this.bot.tweet(roman_tweet, function (err, reply) {
+  self.tweet(roman_tweet, function (err, reply) {
     if(err) return callback(err);
   });
 };

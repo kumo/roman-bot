@@ -2,6 +2,7 @@
 
 // RomanBot 0.2
 // Tweets today's Roman Date in DMY and MDY format
+// Based on BuoyBot https://github.com/johnbeil/BuoyBot
 
 package main
 
@@ -91,7 +92,7 @@ func formatRomanDate(rd RomanDate) string {
 	return output
 }
 
-// getTide selects the next tide prediction from the database and returns a Tide struct
+// getRomanDate converts the components of today's date into roman numerals and returns a RomanDate struct
 func getRomanDate() RomanDate {
 	var romanDate RomanDate
 

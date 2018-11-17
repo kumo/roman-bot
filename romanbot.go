@@ -72,6 +72,7 @@ func tweetFormattedDate(config Config, date string) {
 func loadConfig(config *Config) {
 	// Load path to config from CONFIGPATH environment variable
 	configpath := os.Getenv("CONFIGPATH")
+	fmt.Println("Loading config.json from:", configpath)
 	file, _ := os.Open(configpath)
 	decoder := json.NewDecoder(file)
 	err := decoder.Decode(&config)
